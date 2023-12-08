@@ -21,21 +21,21 @@ let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus
 let arr2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
 
 function findStar () {
-    let a = prompt('Nhập tên ngôi sao: ');
     let b = false;
+    let a = prompt('Nhập tên ngôi sao: ');
     for (i = 0; i < arr1.length; i++) {
         if (arr1[i] == a) {
             for (j = 0; j < arr2.length; j++) {
-                i = j;
+                j = i;
                 document.write("Chòm sao tương ứng là: " + arr2[j]);
                 break;
             } b = true;
         }
     }
-}
+    if (b) {
+    } else {
+        document.write('Không có chòm sao tương ứng');
+    }
 
-if (b) {
-} else {
-    document.write('Không có chòm sao tương ứng');
-}
+}    
 
